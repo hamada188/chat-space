@@ -19,8 +19,8 @@
 |------|----|-------|
 |body|text|　|
 |image|string|　|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references :user|foreign_key: true|
+|group_id|references :group|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -43,8 +43,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references :user|foreign_key: true|
+|group_id|references :group|foreign_key: true|
 
 ### Association
 - belongs_to :group
