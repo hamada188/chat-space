@@ -84,10 +84,7 @@ $white-color: #ffffff;
           color: #999999;
         }
       }
-      a {
-        text-decoration: none ;
-      }
-      &__edit-btn {
+      .main-header__edit-btn {
         font-size: 16px;
         color: #38aef0;
         margin-top: 28px;
@@ -95,6 +92,7 @@ $white-color: #ffffff;
         line-height: 40px;
         padding: 0px 20px;
         border: 1px solid;
+        text-decoration: none ;
       }
     }
     .messages {
@@ -149,17 +147,15 @@ $white-color: #ffffff;
             }
           }
         }
-        a {
-          text-decoration: none ;
-          color:$white-color
-        }
           .send-btn {
             width: 100px;
             height: 50px;
             line-height: 50px;
             text-align: center;
             background-color: #38aef0;
+            color: $white-color;
             margin-left: 15px;  
+            text-decoration: none ;
           }
       }
     }

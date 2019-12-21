@@ -6,9 +6,8 @@
       %ul.main-header__left-box__member-list
         Member : test
         %li.main-header__left-box__member-list__member
-    %a{href: '#'}
-      .main-header__edit-btn
-        Edit
+    = link_to "/", class:"main-header__edit-btn" do
+      Edit
 
 
   .messages
@@ -37,7 +36,6 @@
           %label{class: "input-box__image"}
             = icon("fas", "image")
             %input{type: "file"}
-            
-      %a{href: '#'}
-        .send-btn
-          Send           
+             
+      = link_to "/", class:"send-btn" do
+        Send      
