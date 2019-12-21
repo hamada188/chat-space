@@ -18,24 +18,25 @@
         display:flex;
         justify-content: space-between;
         width: 100%;
-        font-weight: bold;
-        font-size:16px;
         &__name {
-          color:white; 
+          color:#ffffff; 
+          font-size:16px;
+          font-weight: bold;
           }
         &__menu {
           display:flex;
+          list-style: none;
           &__new-group {
             .new-group__btn{
               text-decoration: none;
-              color:white; 
+              color:#ffffff;
               margin-right: 5px;
             }           
           }
         &__edit-user {
           .edit-user__btn{
             text-decoration: none;
-            color:white; 
+            color:#ffffff;
             }           
           }
         }
@@ -45,6 +46,20 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       width: 300px;
+      padding: 20px 20px 0px 20px;
+      .group {
+
+        color:#ffffff;
+        font-weight: bold;
+        &__name{
+          font-size:15px;
+          margin-bottom: 5px;
+        }
+        &__message {
+          font-size:11px;
+          margin-bottom: 40px;
+        }
+      }
     }
     }
     }
