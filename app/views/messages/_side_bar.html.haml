@@ -1,4 +1,17 @@
 .side-bar
   .header
-  
+    .header__box
+      .header__box__name
+        test
+      %ul.header__box__menu
+        %li.header__box__menu__new-group
+          = link_to "#", class: "new-group__btn" do
+            = icon('far', 'edit')
+          
+        %li.header__box__menu__edit-user
+          = link_to "#", class: "edit-user__btn" do
+            = icon('fas', 'cog')         
+
+
+
   .groups
