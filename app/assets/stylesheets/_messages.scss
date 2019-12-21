@@ -69,7 +69,36 @@
     width : calc(100% - 300px);
     .main-header{
       height: 100px;
-      
+      display:flex;
+      justify-content: space-between;
+      padding: 0 40px;
+      &__left-box {
+        margin-top: 35px;
+        &__current-group {
+          font-size:20px;
+          color: #333333;
+          margin-bottom: 15px;
+        }
+        &__member-list {
+          display:flex;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      a {
+        text-decoration: none ;
+      }
+      &__edit-btn {
+        font-size: 16px;
+        color: #38aef0;
+        margin-top: 28px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 20px;
+        border: 1px solid;
+        
+
+      }
     }
     .messages {
       background-color: #fafafa;
