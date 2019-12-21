@@ -29,6 +29,15 @@
       %p.lower-message__content
         まだまだ投稿できないよ
 
-
-  
   .form
+    .input
+      .form-message
+        %input.input-text{class: 'new-message', placeholder: 'type a message'}
+        .form-image
+          %label{class: "input-box__image"}
+            = icon("fas", "image")
+            %input{type: "file"}
+            
+      %a{href: '#'}
+        .send-btn
+          Send           

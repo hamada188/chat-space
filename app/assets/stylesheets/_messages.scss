@@ -1,7 +1,8 @@
+$white-color: #ffffff;
+
 * {
   box-sizing: border-box;
 }
-
   
 .wrapper {
   display:flex;
@@ -19,7 +20,7 @@
         justify-content: space-between;
         width: 100%;
         &__name {
-          color:#ffffff; 
+          color:$white-color ;
           font-size:16px;
           font-weight: bold;
           }
@@ -29,14 +30,14 @@
           &__new-group {
             .new-group__btn{
               text-decoration: none;
-              color:#ffffff;
+              color:$white-color;
               margin-right: 5px;
             }           
           }
         &__edit-user {
           .edit-user__btn{
             text-decoration: none;
-            color:#ffffff;
+            color:$white-color;
             }           
           }
         }
@@ -49,7 +50,7 @@
       padding: 20px 20px 0px 20px;
       .group {
 
-        color:#ffffff;
+        color:$white-color;
         font-weight: bold;
         &__name{
           font-size:15px;
@@ -61,11 +62,9 @@
         }
       }
     }
-    }
-    }
-  
+  }
   .chat-main {
-    background-color: #ffffff;
+    background-color: $white-color;
     width : calc(100% - 300px);
     .main-header{
       height: 100px;
@@ -96,8 +95,6 @@
         line-height: 40px;
         padding: 0px 20px;
         border: 1px solid;
-        
-
       }
     }
     .messages {
@@ -123,15 +120,48 @@
           color: #434a54;
           font-size: 14px;
           padding-bottom: 46px;
-          
-
         }
       }
-      
     }
     .form {
       background-color: #d2d2d2;
       height: 90px;
-     
+      padding: 20px 40px;
+      .input {
+        display: flex;
+        .form-message{
+          display: flex;
+          width: 100%;
+          position: relative;
+          .new-message {
+            height:50px;
+            width: 100%;
+            border-style: none;
+            padding: 0 40px 0 10px;
+          }
+          .form-image {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            input {
+              display: none;
+            }
+          }
+        }
+        a {
+          text-decoration: none ;
+          color:$white-color
+        }
+          .send-btn {
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #38aef0;
+            margin-left: 15px;  
+          }
+      }
     }
   }
+}
