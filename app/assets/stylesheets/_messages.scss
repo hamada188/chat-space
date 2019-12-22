@@ -29,14 +29,12 @@ $white-color: #ffffff;
           list-style: none;
           &__new-group {
             .new-group__btn{
-              text-decoration: none;
               color:$white-color;
               margin-right: 5px;
             }           
           }
         &__edit-user {
           .edit-user__btn{
-            text-decoration: none;
             color:$white-color;
             }           
           }
@@ -49,14 +47,18 @@ $white-color: #ffffff;
       width: 300px;
       padding: 20px 20px 0px 20px;
       .group {
-
         color:$white-color;
         font-weight: bold;
+        .link{
+          text-decoration: none;
+        }
         &__name{
+          color:$white-color ;
           font-size:15px;
           margin-bottom: 5px;
         }
         &__message {
+          color:$white-color ;
           font-size:11px;
           margin-bottom: 40px;
         }

@@ -5,7 +5,7 @@
         =current_user.name
       %ul.header__box__menu
         %li.header__box__menu__new-group
-          = link_to "#", class: "new-group__btn" do
+          = link_to new_group_path, class: "new-group__btn" do
             = icon('far', 'edit')
           
         %li.header__box__menu__edit-user
@@ -15,16 +15,10 @@
 
 
   .groups
-    .group
-      .group__name
-        test
-      .group__message
-        まだメッセージがありません
-      .group__name
-        test2
-      .group__message
-        まだメッセージがありません
-      .group__name
-        test3
-      .group__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' ,class:"link" do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
