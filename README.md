@@ -17,7 +17,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|　|
+|content|string|　|
 |image|string|　|
 |user_id|references :user|foreign_key: true|
 |group_id|references :group|foreign_key: true|

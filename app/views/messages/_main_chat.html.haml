@@ -2,40 +2,34 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__current-group
-        test
+        = @group.name
       %ul.main-header__left-box__member-list
-        Member : test
+        Member : 
+        = current_user.name
         %li.main-header__left-box__member-list__member
-    = link_to "/", class:"main-header__edit-btn" do
+    = link_to edit_group_path(@group), class:"main-header__edit-btn" do
       Edit
 
 
   .messages
-    .upper-message
-      .upper-message__user-name
-        test
-      .upper-message__date
-        2019/12/21(sat)17:11:03
-    .lower-message
-      %p.lower-message__content
-        まだ投稿できないよ
-    .upper-message
-      .upper-message__user-name
-        test
-      .upper-message__date
-        2019/12/21(sat)17:24:37
-    .lower-message
-      %p.lower-message__content
-        まだまだ投稿できないよ
+    - @messages.each do |message|
+      .upper-message
+        .upper-message__user-name
+          = message.user.name
+        .upper-message__date
+          = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      .lower-message
+        - if message.content.present?
+          %p.lower-message__content
+            = message.content
+        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
 
   .form
-    .input
-      .form-message
-        %input.input-text{class: 'new-message', placeholder: 'type a message'}
-        .form-image
-          %label{class: "input-box__image"}
-            = icon("fas", "image")
-            %input{type: "file"}
-             
-      = link_to "/", class:"send-btn" do
-        Send      
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'   
