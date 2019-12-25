@@ -100,6 +100,8 @@ $white-color: #ffffff;
     .messages {
       background-color: #fafafa;
       height: calc(100vh - 190px);
+      overflow-x: scroll;
+      overflow-y: scroll;
       padding: 35px 40px;
       .upper-message{
         display: flex;
